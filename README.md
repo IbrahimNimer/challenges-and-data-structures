@@ -1,12 +1,7 @@
 ### Whiteboard Images
 
-### Challenge A: Array Reversal
-Array reversal reverses the order of elements in an array, flipping the first element to the last and vice versa
-![Array Reversal Whiteboard](./whiteboard-challenges/assets/Array%20Reversal.PNG)
+### Challenge A: Array Reversal  [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/blob/master/whiteboard-challenges/assets/Array%20Reversal.PNG)
 
-### Challenge B: Most Frequent Number
-Finding the most frequent number in an array involves identifying the number that appears the most times in the given array
-![Most Frequent Number Whiteboard](./whiteboard-challenges/assets/Frequent%20Array.PNG)
+### Challenge B: Most Frequent Number [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/blob/master/whiteboard-challenges/assets/Frequent%20Array.PNG)
 
 
-![Code](./whiteboard-challenges/assets/Chal2.PNG)
