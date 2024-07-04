@@ -12,5 +12,5 @@
 
 ### Challenge F: Common-Elements [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/blob/master/Challenges/Common-Elements/Common-Elements/README.md) 
 
-### Challenge E: Reverse-Words [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Reverse-Words/Reverse-Words) 
+### Challenge G: Reverse-Words [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Reverse-Words/Reverse-Words) 
 
