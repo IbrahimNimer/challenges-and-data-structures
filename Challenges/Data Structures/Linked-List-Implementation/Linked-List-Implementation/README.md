@@ -15,7 +15,7 @@ Additionally, write unit tests using xUnit to verify the `Remove` method and the
 
 Here is a visual representation of the linked list and the operations performed:
 
-![Linked List Whiteboard](assets/LinkedListWhiteBoard.png)
+![Linked List Whiteboard](assets/LinkedListWhiteBoard.PNG)
 
 ### Add Operation
 1. Create a new node.
@@ -38,4 +38,4 @@ Here is a visual representation of the linked list and the operations performed:
 
 ## The Real Code
 
-![The Real Code](assets/TheRealCode.png)
+![The Real Code](assets/TheRealCode.PNG)
