@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linked-List-Implementation", "Linked-List-Implementation\Linked-List-Implementation.csproj", "{1C0FBA9D-8D05-40D3-A87F-E92A231AA7A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linked-List-Implementation-Test", "Linked-List-Implementation-Test\Linked-List-Implementation-Test.csproj", "{E491AA7B-4A81-44F0-84DC-577D26F8852E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C0FBA9D-8D05-40D3-A87F-E92A231AA7A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C0FBA9D-8D05-40D3-A87F-E92A231AA7A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C0FBA9D-8D05-40D3-A87F-E92A231AA7A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C0FBA9D-8D05-40D3-A87F-E92A231AA7A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E491AA7B-4A81-44F0-84DC-577D26F8852E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E491AA7B-4A81-44F0-84DC-577D26F8852E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E491AA7B-4A81-44F0-84DC-577D26F8852E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E491AA7B-4A81-44F0-84DC-577D26F8852E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D5FC4DD-86C7-46C6-BCC9-7911475D2751}
+	EndGlobalSection
+EndGlobal
