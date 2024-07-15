@@ -4,43 +4,46 @@ namespace Linked_List_Implementation
 {
     public class Program
     {
-
         static void Main(string[] args)
         {
             LinkedList list = new LinkedList();
 
-            //Add
+            //LinkedList Part 1
+            // Add
             list.Add(10);
             list.Add(20);
             list.Add(30);
+            list.Add(20);  // Duplicate
+            list.Add(10);  // Duplicate
 
-
-            //Print
-            Console.WriteLine("Add:");
+            // Print
+            Console.WriteLine("List after adding elements:");
             list.PrintList();
 
-            //Includes
-            Console.WriteLine("Includes:");
+            // Includes
+            Console.WriteLine("\nIncludes:");
             Console.WriteLine(list.Includes(10)); // Output: True
             Console.WriteLine(list.Includes(40)); // Output: False
 
-            //Remove
-            Console.WriteLine("Remove:");
+            // Remove
+            Console.WriteLine("\nList after removing 10:");
             list.Remove(10);
             list.PrintList();
 
+            ///////////////////////////////////////////////////////////////////////
+            //LinkedList Part 2
+            // Remove Duplicates
+            Console.WriteLine("\nList after removing duplicates:");
+            list.RemoveDuplicate();
+            list.PrintList();
         }
 
 
-
-
+        //LinkedList Part 1
         public class Node
         {
-
             public int Data { get; set; }
-
             public Node Next { get; set; }
-
 
             public Node(int data)
             {
@@ -53,12 +56,10 @@ namespace Linked_List_Implementation
         {
             private Node Head;
 
-
             public LinkedList()
             {
                 this.Head = null;
             }
-
 
             public void Add(int data)
             {
@@ -69,19 +70,14 @@ namespace Linked_List_Implementation
                 }
                 else
                 {
-                    Node current = Head;  
-
-                    
+                    Node current = Head;
                     while (current.Next != null)
                     {
                         current = current.Next;
                     }
-
-
                     current.Next = newNode;
                 }
             }
-
 
             public void PrintList()
             {
@@ -107,8 +103,6 @@ namespace Linked_List_Implementation
                     current = current.Next;
                 }
                 return false;
-
-
             }
 
             public void Remove(int data)
@@ -133,8 +127,36 @@ namespace Linked_List_Implementation
                 }
             }
 
+            ///////////////////////////////////////////////////////////////////////
+            //LinkedList Part 2
+            public void RemoveDuplicate()
+            {
+                try
+                {
+                    Node current = Head;
+
+                    while (current != null && current.Next != null)
+                    {
+                        Node runner = current;
+                        while (runner.Next != null)
+                        {
+                            if (current.Data == runner.Next.Data)
+                            {
+                                runner.Next = runner.Next.Next;
+                            }
+                            else
+                            {
+                                runner = runner.Next;
+                            }
+                        }
+                        current = current.Next;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("An error occurred while removing duplicates: " + ex.Message);
+                }
+            }
         }
-
-
     }
 }
