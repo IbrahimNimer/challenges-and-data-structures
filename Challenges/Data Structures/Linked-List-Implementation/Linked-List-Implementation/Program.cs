@@ -8,7 +8,7 @@ namespace Linked_List_Implementation
         {
             LinkedList list = new LinkedList();
 
-            //LinkedList Part 1
+            // LinkedList Part 1
             // Add
             list.Add(10);
             list.Add(20);
@@ -31,15 +31,37 @@ namespace Linked_List_Implementation
             list.PrintList();
 
             ///////////////////////////////////////////////////////////////////////
-            //LinkedList Part 2
+            // LinkedList Part 2
             // Remove Duplicates
             Console.WriteLine("\nList after removing duplicates:");
             list.RemoveDuplicate();
             list.PrintList();
+
+            ///////////////////////////////////////////////////////////////////////
+            // LinkedList Part 3
+            // MergeSortedLists
+
+            LinkedList list1 = new LinkedList();
+            LinkedList list2 = new LinkedList();
+
+            list1.Add(10);
+            list1.Add(20);
+            list1.Add(30);
+            list2.Add(5);
+            list2.Add(15);
+            list2.Add(25);
+            list2.Add(35);
+            Console.WriteLine("\nList 1:");
+            list1.PrintList();
+            Console.WriteLine("\nList 2:");
+            list2.PrintList();
+
+            LinkedList mergedList = LinkedList.MergeSortedLists(list1, list2);
+            Console.WriteLine("\nMerged List:");
+            mergedList.PrintList();
         }
 
-
-        //LinkedList Part 1
+        // LinkedList Part 1
         public class Node
         {
             public int Data { get; set; }
@@ -128,7 +150,7 @@ namespace Linked_List_Implementation
             }
 
             ///////////////////////////////////////////////////////////////////////
-            //LinkedList Part 2
+            // LinkedList Part 2
             public void RemoveDuplicate()
             {
                 try
@@ -156,6 +178,65 @@ namespace Linked_List_Implementation
                 {
                     Console.WriteLine("An error occurred while removing duplicates: " + ex.Message);
                 }
+            }
+
+            ///////////////////////////////////////////////////////////////////////
+            // LinkedList Part 3
+
+            public static LinkedList MergeSortedLists(LinkedList list1, LinkedList list2)
+            {
+                LinkedList mergedList = new LinkedList();
+                Node current1 = list1.Head;
+                Node current2 = list2.Head;
+
+                while (current1 != null && current2 != null)
+                {
+                    if (current1.Data <= current2.Data)
+                    {
+                        mergedList.Add(current1.Data);
+                        current1 = current1.Next;
+                    }
+                    else
+                    {
+                        mergedList.Add(current2.Data);
+                        current2 = current2.Next;
+                    }
+                }
+
+                while (current1 != null)   
+
+
+                {
+                    mergedList.Add(current1.Data);
+                    current1 = current1.Next;
+                }
+
+                while (current2 != null)
+                {
+                    mergedList.Add(current2.Data);
+                    current2 = current2.Next;
+                }
+
+                return mergedList;
+            }
+
+            
+            public Node GetHead()
+            {
+                return Head;
+            }
+
+            public override string ToString()
+            {
+                var current = Head;
+                var result = "Head";
+                while (current != null)
+                {
+                    result += " -> " + current.Data;
+                    current = current.Next;
+                }
+                result += " -> Null";
+                return result;
             }
         }
     }
