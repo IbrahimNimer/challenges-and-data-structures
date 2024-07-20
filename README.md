@@ -17,3 +17,5 @@
 ### Challenge H:1) Singly LinkedList [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/Linked-List-Implementation/Challenges/Data%20Structures/Linked-List-Implementation/Linked-List-Implementation) 
 
 ### Challenge H:2) Singly LinkedList(Remove Duplicates) [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Data%20Structures/Linked-List-Implementation/Linked-List-Implementation/RemoveDuplicate) 
+
+### Challenge H:3) Singly LinkedList(MergedLists) [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Data%20Structures/Linked-List-Implementation/Linked-List-Implementation/MergeSortedLists) 
