@@ -2,8 +2,6 @@
 {
     public class StackSolution
     {
-
-
         public class Node
         {
             public int Data { get; set; }
@@ -56,7 +54,5 @@
         {
             return top == null;
         }
-
-        
     }
 }

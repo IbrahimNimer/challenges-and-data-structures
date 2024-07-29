@@ -1,4 +1,7 @@
 ﻿using System;
+using StackAndQueue.Queue;
+using StackAndQueue.Stack;
+using StackAndQueue.ReverseStack;
 
 namespace StackAndQueue
 {
@@ -14,7 +17,7 @@ namespace StackAndQueue
         static void PerformStackOperations()
         {
             // Stack
-            Stack.StackSolution stack = new Stack.StackSolution();
+            StackSolution stack = new StackSolution();
 
             stack.Push(10);
             stack.Push(20);
@@ -40,12 +43,27 @@ namespace StackAndQueue
             {
                 Console.WriteLine(ex.Message);
             }
+
+            // Push elements again to reverse them
+            stack.Push(10);
+            stack.Push(20);
+            stack.Push(30);
+
+            // Reverse the stack using the ReverseStackUsingQueue class
+            ReverseStackUsingQueue reverser = new ReverseStackUsingQueue();
+            reverser.Reverse(stack);
+            Console.WriteLine("- - - - - - - - - -");
+            Console.WriteLine("Stack after reversal:");
+            while (!stack.IsEmpty())
+            {
+                Console.WriteLine(stack.Pop());
+            }
         }
 
         static void PerformQueueOperations()
         {
             // Queue
-            Queue.QueueSolution queue = new Queue.QueueSolution();
+            QueueSolution queue = new QueueSolution();
 
             queue.Enqueue(10);
             queue.Enqueue(20);

@@ -2,7 +2,6 @@
 {
     public class QueueSolution
     {
-
         public class Node
         {
             public int Data { get; set; }
@@ -69,7 +68,5 @@
         {
             return front == null;
         }
-
-        
     }
 }
