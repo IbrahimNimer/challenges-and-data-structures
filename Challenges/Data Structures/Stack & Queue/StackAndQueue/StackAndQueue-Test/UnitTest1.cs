@@ -1,5 +1,7 @@
 using StackAndQueue.Queue;
 using StackAndQueue.Stack;
+using StackAndQueue.ReverseStack;
+using Xunit;
 
 public class StackAndQueueTests
 {
@@ -93,5 +95,61 @@ public class StackAndQueueTests
 
         queue.Dequeue();
         Assert.True(queue.IsEmpty());
+    }
+
+
+
+    //ReverseStackUsingQueue Test
+    [Fact]
+    public void ReverseStack_MultipleElements()
+    {
+        // Arrange
+        var stack = new StackSolution();
+        stack.Push(10);
+        stack.Push(20);
+        stack.Push(30);
+
+        var reverser = new ReverseStackUsingQueue();
+
+        // Act
+        reverser.Reverse(stack);
+
+        // Assert
+        Assert.Equal(10, stack.Pop());
+        Assert.Equal(20, stack.Pop());
+        Assert.Equal(30, stack.Pop());
+        Assert.True(stack.IsEmpty());
+    }
+
+    [Fact]
+    public void ReverseStack_SingleElement()
+    {
+        // Arrange
+        var stack = new StackSolution();
+        stack.Push(10);
+
+        var reverser = new ReverseStackUsingQueue();
+
+        // Act
+        reverser.Reverse(stack);
+
+        // Assert
+        Assert.Equal(10, stack.Pop());
+        Assert.True(stack.IsEmpty());
+    }
+
+    [Fact]
+    public void ReverseStack_EmptyStack()
+    {
+        // Arrange
+        var stack = new StackSolution();
+
+        var reverser = new ReverseStackUsingQueue();
+
+        // Act
+        reverser.Reverse(stack);
+
+        // Assert
+        Assert.True(stack.IsEmpty());
     }
 }
