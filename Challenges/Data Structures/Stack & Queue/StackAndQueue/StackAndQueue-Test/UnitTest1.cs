@@ -2,6 +2,7 @@ using StackAndQueue.Queue;
 using StackAndQueue.Stack;
 using StackAndQueue.ReverseStack;
 using Xunit;
+using StackAndQueue.DeleteMiddleElement;
 
 public class StackAndQueueTests
 {
@@ -151,5 +152,49 @@ public class StackAndQueueTests
 
         // Assert
         Assert.True(stack.IsEmpty());
+    }
+
+
+    //DeletionTest
+    public class StackWithDeleteMiddleTests
+    {
+        [Fact]
+        public void DeleteMiddle_OddSizedStack_RemovesMiddleElement()
+        {
+            // Arrange
+            StackSolution stack = new StackSolution();
+            StackWithDeleteMiddle stackWithDeleteMiddle = new StackWithDeleteMiddle();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(4);
+            stack.Push(5);
+
+            // Act
+            stackWithDeleteMiddle.DeleteMiddle(stack);
+
+            // Assert
+            Assert.Equal("Stack: Top -> 5 -> 4 -> 2 -> 1", stack.ToString());
+        }
+
+        [Fact]
+        public void DeleteMiddle_EvenSizedStack_RemovesMiddleElement()
+        {
+            // Arrange
+            StackSolution stack = new StackSolution();
+            StackWithDeleteMiddle stackWithDeleteMiddle = new StackWithDeleteMiddle();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(4);
+            stack.Push(5);
+            stack.Push(6);
+
+            // Act
+            stackWithDeleteMiddle.DeleteMiddle(stack);
+
+            // Assert
+            Assert.Equal("Stack: Top -> 6 -> 5 -> 3 -> 2 -> 1", stack.ToString());
+        }
     }
 }

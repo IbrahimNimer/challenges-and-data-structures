@@ -2,6 +2,7 @@
 using StackAndQueue.Queue;
 using StackAndQueue.Stack;
 using StackAndQueue.ReverseStack;
+using StackAndQueue.DeleteMiddleElement;
 
 namespace StackAndQueue
 {
@@ -18,6 +19,7 @@ namespace StackAndQueue
         {
             // Stack
             StackSolution stack = new StackSolution();
+            StackWithDeleteMiddle stackWithDeleteMiddle = new StackWithDeleteMiddle();
 
             stack.Push(10);
             stack.Push(20);
@@ -44,6 +46,10 @@ namespace StackAndQueue
                 Console.WriteLine(ex.Message);
             }
 
+
+
+
+            //Reverse Challenge
             // Push elements again to reverse them
             stack.Push(10);
             stack.Push(20);
@@ -58,6 +64,31 @@ namespace StackAndQueue
             {
                 Console.WriteLine(stack.Pop());
             }
+
+
+
+
+            //Delete Challenge
+            stack.Push(7);
+            stack.Push(14);
+            stack.Push(3);
+            stack.Push(8);
+            stack.Push(5);
+            Console.WriteLine("- - - - - - - - - -");
+            Console.WriteLine("The Stack before deletion:");
+            Console.WriteLine(stack); 
+            stackWithDeleteMiddle.DeleteMiddle(stack);
+            Console.WriteLine("The Stack After deletion:");
+            Console.WriteLine(stack); 
+
+            stack.Push(2);
+            stack.Push(9);
+            stack.Push(11);
+            Console.WriteLine("The Stack before deletion:");
+            Console.WriteLine(stack); 
+            stackWithDeleteMiddle.DeleteMiddle(stack);
+            Console.WriteLine("The Stack after deletion:");
+            Console.WriteLine(stack);
         }
 
         static void PerformQueueOperations()

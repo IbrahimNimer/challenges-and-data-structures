@@ -1,8 +1,10 @@
-﻿namespace StackAndQueue.Stack
+﻿using System;
+
+namespace StackAndQueue.Stack
 {
     public class StackSolution
     {
-        public class Node
+        private class Node
         {
             public int Data { get; set; }
             public Node Next { get; set; }
@@ -31,21 +33,17 @@
         public int Pop()
         {
             if (IsEmpty())
-            {
                 throw new InvalidOperationException("Stack is empty.");
-            }
 
-            int result = top.Data;
+            int data = top.Data;
             top = top.Next;
-            return result;
+            return data;
         }
 
         public int Peek()
         {
             if (IsEmpty())
-            {
                 throw new InvalidOperationException("Stack is empty.");
-            }
 
             return top.Data;
         }
@@ -53,6 +51,18 @@
         public bool IsEmpty()
         {
             return top == null;
+        }
+
+        public override string ToString()
+        {
+            Node current = top;
+            string result = "Stack: Top -> ";
+            while (current != null)
+            {
+                result += current.Data + " -> ";
+                current = current.Next;
+            }
+            return result.TrimEnd(' ', '-', '>');
         }
     }
 }
