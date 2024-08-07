@@ -17,7 +17,7 @@ The `StackWithMin` class provides additional functionality to a standard stack b
 
 ## Whiteboard Diagram
 
-![MinStack](assets/StackMinWB.PNG)
+![MinStack](assets/StackMinWb.PNG)
 
 ## The Real Code
 
