@@ -5,6 +5,8 @@
         static void Main(string[] args)
         {
             PerformTree();
+            Console.WriteLine("- - - - - - - - - - \n- - - - - - - - - -");
+            PerformMirror();
         }
 
 
@@ -53,10 +55,43 @@
             Console.WriteLine("After removing 15:");
             Console.WriteLine();
             bst.Print();
-            
+            Console.WriteLine();
+
+        }
+
+        public static void PerformMirror()
+        {
+
+            var bTree = new BinarySearchTree(4);
+            bTree.Root.Left = new Node(8);
+            bTree.Root.Right = new Node(7);
+            bTree.Root.Left.Left = new Node(12);
+            bTree.Root.Left.Right = new Node(9);
+
+            Console.WriteLine("MirrorTree Challenge:");
+            Console.WriteLine();
+
+            // Print the original BinaryTree
+            Console.WriteLine($"1)Original Binary Tree:");
+            Console.WriteLine();
+            bTree.PrintInOrder();
+            Console.WriteLine();
+
+
+            // Mirror the BinaryTree
+            bTree.MirrorTree(bTree.Root);
+
+            // Print the mirrored BinaryTree
+            Console.WriteLine("2)Mirrored Binary Tree:");
+            Console.WriteLine();
+            bTree.PrintInOrder();
+            Console.WriteLine();
+
 
 
         }
+
+
 
     }
 }

@@ -44,7 +44,7 @@ namespace TreeImplementation
             catch (Exception ex)
             {
                 Console.WriteLine($"Error in AddRecursive: {ex.Message}");
-                throw; 
+                throw;
             }
         }
 
@@ -87,7 +87,7 @@ namespace TreeImplementation
             catch (Exception ex)
             {
                 Console.WriteLine($"Error in ContainsRecursive: {ex.Message}");
-                throw; 
+                throw;
             }
         }
 
@@ -147,7 +147,7 @@ namespace TreeImplementation
             catch (Exception ex)
             {
                 Console.WriteLine($"Error in RemoveRecursive: {ex.Message}");
-                throw; 
+                throw;
             }
         }
 
@@ -164,7 +164,7 @@ namespace TreeImplementation
             catch (Exception ex)
             {
                 Console.WriteLine($"Error finding minimum node: {ex.Message}");
-                throw; 
+                throw;
             }
         }
 
@@ -212,5 +212,7 @@ namespace TreeImplementation
         }
     }
 
-    
+
+
+
 }

@@ -77,6 +77,22 @@ namespace TreeImplementation
             }
         }
 
+
+        public void MirrorTree(Node node)
+        {
+            if (node == null) return;
+
+            
+            Node temp = node.Left;
+            node.Left = node.Right;
+            node.Right = temp;
+
+            
+            MirrorTree(node.Left);
+            MirrorTree(node.Right);
+        }
+
+
     }
 
 }
