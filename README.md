@@ -28,4 +28,6 @@
 
 ### Challenge I:4) MinStack [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/Min-Stack/Challenges/Data%20Structures/Stack%20%26%20Queue/StackAndQueue/StackAndQueue/MinStack)
 
-### Challenge J: Tree Implementation [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Data%20Structures/Trees/TreeImplementation/TreeImplementation) 
+### Challenge J:1) Tree Implementation [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Data%20Structures/Trees/TreeImplementation/TreeImplementation) 
+
+### Challenge J:2) Mirror Tree Implementation [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Data%20Structures/Trees/TreeImplementation/TreeImplementation/MirrorTree) 
