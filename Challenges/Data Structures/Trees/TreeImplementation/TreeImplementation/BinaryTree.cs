@@ -15,7 +15,42 @@ namespace TreeImplementation
         {
             Root = new Node(rootValue);
         }
-
+  int FirstMax = 0;
+  int SecMax = 0;
+  public int FindSecondMax(TNode node)
+  {
+      if (node == null) return SecMax;
+      if (node.Value > FirstMax)
+      {
+          SecMax = FirstMax; 
+          FirstMax = node.Value;
+          if (node.Left == null && node.Right == null)
+          {
+              return FirstMax;
+          }
+          if (node.Right != null)
+          {
+              FindSecondMax(node.Right);
+          }
+          if (node.Right == null)
+          {
+              FindSecondMax(node.Left);
+          }
+      }
+      else if (node.Value > SecMax && node.Value < FirstMax)
+      {
+          SecMax = node.Value; 
+      }
+      if (node.Left != null)
+      {
+          FindSecondMax(node.Left);
+      }
+      if (node.Right != null)
+      {
+          FindSecondMax(node.Right);
+      }
+      return SecMax;
+  }
         public void PreOrder(Node node)
         {
             if (node == null) return; 
