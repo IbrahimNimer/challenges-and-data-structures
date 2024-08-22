@@ -15,45 +15,10 @@ namespace TreeImplementation
         {
             Root = new Node(rootValue);
         }
-  int FirstMax = 0;
-  int SecMax = 0;
-  public int FindSecondMax(TNode node)
-  {
-      if (node == null) return SecMax;
-      if (node.Value > FirstMax)
-      {
-          SecMax = FirstMax; 
-          FirstMax = node.Value;
-          if (node.Left == null && node.Right == null)
-          {
-              return FirstMax;
-          }
-          if (node.Right != null)
-          {
-              FindSecondMax(node.Right);
-          }
-          if (node.Right == null)
-          {
-              FindSecondMax(node.Left);
-          }
-      }
-      else if (node.Value > SecMax && node.Value < FirstMax)
-      {
-          SecMax = node.Value; 
-      }
-      if (node.Left != null)
-      {
-          FindSecondMax(node.Left);
-      }
-      if (node.Right != null)
-      {
-          FindSecondMax(node.Right);
-      }
-      return SecMax;
-  }
+        
         public void PreOrder(Node node)
         {
-            if (node == null) return; 
+            if (node == null) return;
 
             Console.Write(node.Value + "  ");
             PreOrder(node.Left);
@@ -117,17 +82,69 @@ namespace TreeImplementation
         {
             if (node == null) return;
 
-            
+
             Node temp = node.Left;
             node.Left = node.Right;
             node.Right = temp;
 
-            
+
             MirrorTree(node.Left);
             MirrorTree(node.Right);
         }
 
+        int FirstMax = 0;
+        int SecMax = 0;
+        public int FindSecondMax(Node node)
+        {
+            if (node == null) return SecMax;
+            if (node.Value > FirstMax)
+            {
+                SecMax = FirstMax;
+                FirstMax = node.Value;
+                if (node.Left == null && node.Right == null)
+                {
+                    return FirstMax;
+                }
+                if (node.Right != null)
+                {
+                    FindSecondMax(node.Right);
+                }
+                if (node.Right == null)
+                {
+                    FindSecondMax(node.Left);
+                }
+            }
+            else if (node.Value > SecMax && node.Value < FirstMax)
+            {
+                SecMax = node.Value;
+            }
+            if (node.Left != null)
+            {
+                FindSecondMax(node.Left);
+            }
+            if (node.Right != null)
+            {
+                FindSecondMax(node.Right);
+            }
+            return SecMax;
+        }
+
+
+
+        public int LeafSum(Node node) 
+        {
+            if (node == null)
+            {
+                return 0;
+            }
+
+            if (node.Left == null && node.Right == null)
+            {
+                return node.Value;
+            }
+
+            return LeafSum(node.Left) + LeafSum(node.Right);
+        }
 
     }
-
 }

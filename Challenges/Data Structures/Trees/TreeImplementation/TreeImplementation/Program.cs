@@ -7,6 +7,8 @@
             PerformTree();
             Console.WriteLine("- - - - - - - - - - \n- - - - - - - - - -");
             PerformMirror();
+            Console.WriteLine("- - - - - - - - - - \n- - - - - - - - - -");
+            PerformLeafSum();
         }
 
 
@@ -90,6 +92,23 @@
 
 
         }
+
+
+        public static void PerformLeafSum()
+        {
+            var bTree = new BinaryTree(9); 
+            bTree.Root.Left = new Node(8);
+            bTree.Root.Right = new Node(12);
+            bTree.Root.Left.Left = new Node(3);
+            bTree.Root.Left.Right = new Node(7);
+            bTree.Root.Right.Left = new Node(17);
+            bTree.Root.Right.Right = new Node(23);
+            bTree.Root.Left.Left.Right = new Node(4);
+
+            Console.WriteLine("Sum of leaf nodes Challenge:");
+            Console.WriteLine(bTree.LeafSum(bTree.Root)); 
+        }
+
 
 
 
