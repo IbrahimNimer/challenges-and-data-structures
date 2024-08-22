@@ -31,4 +31,7 @@
 ### Challenge J:1) Tree Implementation [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Data%20Structures/Trees/TreeImplementation/TreeImplementation) 
 
 ### Challenge J:2) Mirror Tree Implementation [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Data%20Structures/Trees/TreeImplementation/TreeImplementation/MirrorTree) 
+
 ### Challenge J:3) SecMaxValue [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/blob/master/whiteboard-challenges/assets/ch15.png) 
+
+### Challenge J:4) LeafSum [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Data%20Structures/Trees/TreeImplementation/TreeImplementation/LeafSum) 
