@@ -15,7 +15,7 @@ namespace TreeImplementation
         {
             Root = new Node(rootValue);
         }
-        
+
         public void PreOrder(Node node)
         {
             if (node == null) return;
@@ -131,7 +131,7 @@ namespace TreeImplementation
 
 
 
-        public int LeafSum(Node node) 
+        public int LeafSum(Node node)
         {
             if (node == null)
             {
@@ -145,6 +145,36 @@ namespace TreeImplementation
 
             return LeafSum(node.Left) + LeafSum(node.Right);
         }
+
+
+
+        public static void Helper(List<int> largest,
+                   Node root, int level)
+        {
+            if (root == null)
+                return;
+
+
+            if (level == largest.Count)
+                largest.Add(root.Value);
+
+            else
+
+
+                largest[level] = Math.Max(largest[level], root.Value);
+
+
+            Helper(largest, root.Left, level + 1);
+            Helper(largest, root.Right, level + 1);
+        }
+
+        public static List<int> LargestValues(Node root)
+        {
+            List<int> level = new List<int>();
+            Helper(level, root, 0);
+            return level;
+        }
+
 
     }
 }

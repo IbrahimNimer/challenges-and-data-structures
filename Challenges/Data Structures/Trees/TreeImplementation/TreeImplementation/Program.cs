@@ -9,6 +9,8 @@
             PerformMirror();
             Console.WriteLine("- - - - - - - - - - \n- - - - - - - - - -");
             PerformLeafSum();
+            Console.WriteLine("- - - - - - - - - - \n- - - - - - - - - -");
+            PerformLargestLevelValue();
         }
 
 
@@ -96,7 +98,7 @@
 
         public static void PerformLeafSum()
         {
-            var bTree = new BinaryTree(9); 
+            var bTree = new BinaryTree(9);
             bTree.Root.Left = new Node(8);
             bTree.Root.Right = new Node(12);
             bTree.Root.Left.Left = new Node(3);
@@ -106,8 +108,37 @@
             bTree.Root.Left.Left.Right = new Node(4);
 
             Console.WriteLine("Sum of leaf nodes Challenge:");
-            Console.WriteLine(bTree.LeafSum(bTree.Root)); 
+            Console.WriteLine(bTree.LeafSum(bTree.Root));
         }
+
+
+
+        public static void PerformLargestLevelValue()
+        {
+          
+            BinaryTree Btree = new BinaryTree(5);
+
+
+            Btree.Root.Left = new Node(13);
+            Btree.Root.Right = new Node(7);
+            Btree.Root.Left.Left = new Node(3);
+            Btree.Root.Left.Right = new Node(7);
+            Btree.Root.Right.Left = new Node(12);
+            Btree.Root.Right.Right = new Node(20);
+            Btree.Root.Left.Left.Left = new Node(1);
+            Btree.Root.Left.Left.Right = new Node(4);
+            Btree.Root.Right.Left.Right = new Node(11);
+
+
+            List<int> largest = BinaryTree.LargestValues(Btree.Root);
+
+
+
+            Console.WriteLine("Largest Level Value Challenge:");
+            for (int i = 0; i < largest.Count; i++)
+                Console.Write(largest[i] + " ");
+        }
+
 
 
 
