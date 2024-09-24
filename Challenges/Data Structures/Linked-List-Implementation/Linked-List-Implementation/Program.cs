@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Linked_List_Implementation
 {
@@ -59,6 +60,54 @@ namespace Linked_List_Implementation
             LinkedList mergedList = LinkedList.MergeSortedLists(list1, list2);
             Console.WriteLine("\nMerged List:");
             mergedList.PrintList();
+
+            ///////////////////////////////////////////////////////////////////////
+            // LinkedList Part 4
+            // Rotate LinkedList
+
+            LinkedList list3 = new LinkedList();
+            list3.Add(1);
+            list3.Add(2);
+            list3.Add(3);
+            list3.Add(4);
+            list3.Add(5);
+            list3.Add(6);
+
+            LinkedList list4 = new LinkedList();
+            list4.Add(10);
+            list4.Add(20);
+            list4.Add(30);
+            list4.Add(40);
+            list4.Add(50);
+
+            LinkedList list5 = new LinkedList();
+            list5.Add(5);
+            list5.Add(10);
+            list5.Add(15);
+            list5.Add(20);
+
+            Console.WriteLine("\nRotating the LinkedList by k positions:");
+
+            Console.WriteLine("\nList 3:");
+            Console.WriteLine("Original List:");
+            list3.PrintList();
+            LinkedList rotatedList = LinkedList.RotateLinkedList(list3, 2);
+            Console.WriteLine("K Rotated List:");
+            rotatedList.PrintList();
+
+            Console.WriteLine("\nList 4:");
+            Console.WriteLine("Original List:");
+            list4.PrintList();
+            LinkedList rotatedList1 = LinkedList.RotateLinkedList(list4, 3);
+            Console.WriteLine("K Rotated List:");
+            rotatedList1.PrintList();
+
+            Console.WriteLine("\nList 5:");
+            Console.WriteLine("Original List:");
+            list5.PrintList();
+            LinkedList rotatedList2 = LinkedList.RotateLinkedList(list5, 1);
+            rotatedList2.PrintList();
+
         }
 
         // LinkedList Part 1
@@ -203,7 +252,7 @@ namespace Linked_List_Implementation
                     }
                 }
 
-                while (current1 != null)   
+                while (current1 != null)
 
 
                 {
@@ -220,7 +269,7 @@ namespace Linked_List_Implementation
                 return mergedList;
             }
 
-            
+
             public Node GetHead()
             {
                 return Head;
@@ -238,6 +287,48 @@ namespace Linked_List_Implementation
                 result += " -> Null";
                 return result;
             }
+
+            ///////////////////////////////////////////////////////////////////////
+            // LinkedList Part 4
+
+            public static LinkedList RotateLinkedList(LinkedList list, int k)
+            {
+                if (list.Head == null || k == 0)
+                    return list;
+
+                Node current = list.Head;
+                int length = 1;
+
+ 
+                while (current.Next != null)
+                {
+                    current = current.Next;
+                    length++;
+                }
+
+                k = k % length;
+
+                if (k == 0)
+                    return list;
+
+
+                current.Next = list.Head;
+                current = list.Head;
+                for (int i = 1; i < k; i++)
+                {
+                    current = current.Next;
+                }
+
+                list.Head = current.Next;
+                current.Next = null;
+
+                return list;
+            }
+
+
+
         }
+
     }
 }
+
