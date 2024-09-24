@@ -20,6 +20,8 @@
 
 ### Challenge H:3) Singly LinkedList(MergedLists) [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Data%20Structures/Linked-List-Implementation/Linked-List-Implementation/MergeSortedLists) 
 
+### Challenge H:4) Singly LinkedList(RotateLinkedList) [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Data%20Structures/Linked-List-Implementation/Linked-List-Implementation/RotateLinkedList) 
+
 ### Challenge I:1) Stack And Queue [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Data%20Structures/Stack%20%26%20Queue/StackAndQueue/StackAndQueue)
 
 ### Challenge I:2) ReverseStackUsingQueue [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Data%20Structures/Stack%20%26%20Queue/StackAndQueue/StackAndQueue/ReverseStackUsingQueue)
