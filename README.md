@@ -39,3 +39,5 @@
 ### Challenge J:4) LeafSum [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Data%20Structures/Trees/TreeImplementation/TreeImplementation/LeafSum)
 
 ### Challenge J:5) LargestLevelValue [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Data%20Structures/Trees/TreeImplementation/TreeImplementation/LargestLevelValue) 
+
+### Challenge J:6) Right View [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Data%20Structures/Trees/TreeImplementation/TreeImplementation/RightViewPrint) 
