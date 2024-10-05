@@ -1,4 +1,4 @@
-#### Table Of Content:
+### Table Of Content:
 
 ### Challenge A: Array Reversal  [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/blob/master/whiteboard-challenges/assets/Array%20Reversal.PNG)
 
