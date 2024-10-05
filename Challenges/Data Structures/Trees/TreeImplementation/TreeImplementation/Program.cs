@@ -15,6 +15,8 @@
             PerformFindSecondMax();
             Console.WriteLine("- - - - - - - - - - \n- - - - - - - - - -");
             PerformPrintRightView();
+            Console.WriteLine("- - - - - - - - - - \n- - - - - - - - - -");
+            PerformMaxLevelNodes();
         }
 
         public static void PerformTree()
@@ -152,6 +154,28 @@
             Console.WriteLine("Right View of the Tree:");
             bTree.PrintRightView();
         }
+
+        public static void PerformMaxLevelNodes()
+        {
+            var bTree = new BinaryTree(5);
+
+            bTree.Root.Left = new Node(13);
+            bTree.Root.Right = new Node(7);
+            bTree.Root.Left.Left = new Node(3);
+            bTree.Root.Left.Right = new Node(7);
+            bTree.Root.Right.Left = new Node(12);
+            bTree.Root.Right.Right = new Node(20);
+            bTree.Root.Left.Left.Left = new Node(1);
+            bTree.Root.Left.Left.Right = new Node(4);
+            bTree.Root.Right.Left.Right = new Node(11);
+
+            // Find the level with the maximum number of nodes
+            int maxLevel = bTree.FindMaxLevelNodes();
+
+            Console.WriteLine("Max Level Nodes Challenge:");
+            Console.WriteLine($"The level with the maximum number of nodes is: {maxLevel}");
+        }
+
 
     }
 }
