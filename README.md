@@ -43,3 +43,5 @@
 ### Challenge J:6) Right View [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Data%20Structures/Trees/TreeImplementation/TreeImplementation/RightViewPrint) 
 
 ### Challenge J:7) Max Level Nodes [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Data%20Structures/Trees/TreeImplementation/TreeImplementation/MaxLevelNodes) 
+
+### Challenge J:8) Minimum Depth [Link](https://github.com/IbrahimNimer/challenges-and-data-structures/tree/master/Challenges/Data%20Structures/Trees/TreeImplementation/TreeImplementation/MinimumDepth) 
