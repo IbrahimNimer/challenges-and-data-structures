@@ -16,6 +16,11 @@ namespace TreeImplementation
             Root = new Node(rootValue);
         }
 
+        public BinaryTree(object value)
+        {
+            this.value = value;
+        }
+
         public void PreOrder(Node node)
         {
             if (node == null) return;
@@ -178,6 +183,7 @@ namespace TreeImplementation
 
         //View Right
         private int maxLevel = 0;
+        private object value;
 
         public void PrintRightView()
         {
@@ -267,6 +273,38 @@ namespace TreeImplementation
             }
 
             return maxLevel;
+        }
+
+
+        //Minimun Depth
+        public int FindMinimumDepth()
+        {
+            return FindMinimumDepth(Root);
+        }
+
+        private int FindMinimumDepth(Node node)
+        {
+            if (node == null)
+            {
+                return 0;
+            }
+
+            if (node.Left == null && node.Right == null)
+            {
+                return 1;
+            }
+
+            if (node.Left == null)
+            {
+                return FindMinimumDepth(node.Right) + 1;
+            }
+
+            if (node.Right == null)
+            {
+                return FindMinimumDepth(node.Left) + 1;
+            }
+
+            return Math.Min(FindMinimumDepth(node.Left), FindMinimumDepth(node.Right)) + 1;
         }
 
 

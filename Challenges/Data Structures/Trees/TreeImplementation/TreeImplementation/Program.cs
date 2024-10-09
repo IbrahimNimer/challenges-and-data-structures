@@ -17,7 +17,10 @@
             PerformPrintRightView();
             Console.WriteLine("- - - - - - - - - - \n- - - - - - - - - -");
             PerformMaxLevelNodes();
+            Console.WriteLine("- - - - - - - - - - \n- - - - - - - - - -");
+            PerformMinimumDepth(); 
         }
+
 
         public static void PerformTree()
         {
@@ -175,6 +178,31 @@
             Console.WriteLine("Max Level Nodes Challenge:");
             Console.WriteLine($"The level with the maximum number of nodes is: {maxLevel}");
         }
+
+        public static void PerformMinimumDepth()
+        {
+            var bTree = new BinaryTree(1);
+            bTree.Root.Left = new Node(2);
+            bTree.Root.Right = new Node(3);
+            bTree.Root.Left.Left = new Node(4);
+            bTree.Root.Left.Right = new Node(5);
+
+            Console.WriteLine("Minimum Depth Challenge:");
+            int minDepth = bTree.FindMinimumDepth();
+            Console.WriteLine($"The minimum depth of the tree is: {minDepth}");
+
+            // Example 2: Another test case
+            var bTree2 = new BinaryTree(1);
+            bTree2.Root.Left = new Node(2);
+            bTree2.Root.Right = new Node(3);
+            bTree2.Root.Left.Right = new Node(5);
+            bTree2.Root.Right.Right = new Node(6);
+
+            Console.WriteLine("Minimum Depth (Test Case 2):");
+            int minDepth2 = bTree2.FindMinimumDepth();
+            Console.WriteLine($"The minimum depth of the second tree is: {minDepth2}");
+        }
+
 
 
     }
